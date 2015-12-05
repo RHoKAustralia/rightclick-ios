@@ -19,4 +19,7 @@
               andImage:(UIImage *)image
              mediaInfo:(NSDictionary *)mediaInfo
                 lesson:(Lesson *)lesson;
+
+-(void)generatePDFWithLesson:(Lesson *)lesson;
+- (NSString *)getPDFPath;
 @end

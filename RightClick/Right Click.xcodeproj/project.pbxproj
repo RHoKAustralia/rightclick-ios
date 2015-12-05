@@ -10,7 +10,9 @@
 		211978B61C129B03009CE0A5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978B51C129B03009CE0A5 /* Note.m */; };
 		211978B91C129C16009CE0A5 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978B81C129C16009CE0A5 /* Lesson.m */; };
 		211978BC1C129D96009CE0A5 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978BB1C129D96009CE0A5 /* DataService.m */; };
+		211978C01C12B52E009CE0A5 /* JLPDFGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978BF1C12B52E009CE0A5 /* JLPDFGenerator.m */; };
 		2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2135A6611C128BA1004A5890 /* NoteViewController.m */; };
+		21A2421E1C12B5CE0009314E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A2421D1C12B5CE0009314E /* CoreGraphics.framework */; };
 		21A425081C127C8A00ED9EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A425071C127C8A00ED9EFF /* main.m */; };
 		21A4250B1C127C8A00ED9EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250A1C127C8A00ED9EFF /* AppDelegate.m */; };
 		21A4250E1C127C8A00ED9EFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250D1C127C8A00ED9EFF /* ViewController.m */; };
@@ -39,8 +41,12 @@
 		211978B81C129C16009CE0A5 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
 		211978BA1C129D96009CE0A5 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
 		211978BB1C129D96009CE0A5 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		211978BE1C12B52E009CE0A5 /* JLPDFGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPDFGenerator.h; sourceTree = "<group>"; };
+		211978BF1C12B52E009CE0A5 /* JLPDFGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPDFGenerator.m; sourceTree = "<group>"; };
 		2135A6601C128BA1004A5890 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		2135A6611C128BA1004A5890 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		21A2421D1C12B5CE0009314E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		21A2421F1C12C6760009314E /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		21A425031C127C8A00ED9EFF /* Right Click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right Click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A425071C127C8A00ED9EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A425091C127C8A00ED9EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A2421E1C12B5CE0009314E /* CoreGraphics.framework in Frameworks */,
 				53FA619EC63A7D0A6A0FBB04 /* libPods-Right Click.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +95,18 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		211978BD1C12B51C009CE0A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				211978BE1C12B52E009CE0A5 /* JLPDFGenerator.h */,
+				211978BF1C12B52E009CE0A5 /* JLPDFGenerator.m */,
+				21A2421F1C12C6760009314E /* Config.h */,
+				211978BA1C129D96009CE0A5 /* DataService.h */,
+				211978BB1C129D96009CE0A5 /* DataService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		21A424FA1C127C8A00ED9EFF = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +130,7 @@
 		21A425051C127C8A00ED9EFF /* Right Click */ = {
 			isa = PBXGroup;
 			children = (
+				211978BD1C12B51C009CE0A5 /* Services */,
 				211978B31C129ADB009CE0A5 /* Models */,
 				21A425091C127C8A00ED9EFF /* AppDelegate.h */,
 				21A4250A1C127C8A00ED9EFF /* AppDelegate.m */,
@@ -118,8 +138,6 @@
 				21A4250D1C127C8A00ED9EFF /* ViewController.m */,
 				2135A6601C128BA1004A5890 /* NoteViewController.h */,
 				2135A6611C128BA1004A5890 /* NoteViewController.m */,
-				211978BA1C129D96009CE0A5 /* DataService.h */,
-				211978BB1C129D96009CE0A5 /* DataService.m */,
 				21A4250F1C127C8A00ED9EFF /* Main.storyboard */,
 				21A425121C127C8A00ED9EFF /* Assets.xcassets */,
 				21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */,
@@ -149,6 +167,7 @@
 		713CB63287ABABA191898479 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21A2421D1C12B5CE0009314E /* CoreGraphics.framework */,
 				078A2D03421F994AE5380BA8 /* libPods-Right Click.a */,
 			);
 			name = Frameworks;
@@ -316,6 +335,7 @@
 			files = (
 				211978B61C129B03009CE0A5 /* Note.m in Sources */,
 				211978BC1C129D96009CE0A5 /* DataService.m in Sources */,
+				211978C01C12B52E009CE0A5 /* JLPDFGenerator.m in Sources */,
 				2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */,
 				21A4250E1C127C8A00ED9EFF /* ViewController.m in Sources */,
 				211978B91C129C16009CE0A5 /* Lesson.m in Sources */,

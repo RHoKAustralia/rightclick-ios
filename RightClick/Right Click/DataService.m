@@ -9,6 +9,8 @@
 #import "DataService.h"
 #import "Lesson.h"
 #import "Note.h"
+#import "JLPDFGenerator.h"
+#import "Config.h"
 
 @implementation DataService
 
@@ -33,7 +35,12 @@
     }
     
     if (image) {
+        // Scale Image
+        image = [self scaleImage:image toSize:CGSizeMake(IMAGE_WIDTH, IMAGE_HEIGHT)];
+        
+        // Save Scaled Image
         note.imagePath = [self saveImage:image mediaInfo:mediaInfo];
+        note.image = image;
         NSLog(@"Image Path %@", note.imagePath);
     }
     
@@ -42,8 +49,6 @@
 }
 
 -(NSString *)saveImage:(UIImage *)imageToSave mediaInfo:(NSDictionary *)mediaInfo {
-    
-    imageToSave = [self scaleImage:imageToSave toSize:CGSizeMake(640, 480)];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -74,6 +79,45 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
+}
+
+-(void)generatePDFWithLesson:(Lesson *)lesson {
+    
+    UIFont *font = [UIFont systemFontOfSize:16];
+    UIColor *fontColor = [UIColor blackColor];
+    
+    JLPDFGenerator *generator = [JLPDFGenerator new];
+    [generator setupPDFDocumentNamed:DOCUMENT_NAME withSize:kSizeA4Portrait];
+    [generator beginPDFPage];
+    
+    int yAxix = 100;
+    
+    @autoreleasepool {
+        for (Note *note in lesson.notes) {
+            if ([note.instruction length] != 0) {
+                CGRect textRect = CGRectMake(100, yAxix, 100, 100);
+                [generator addText:note.instruction
+                         withFrame:textRect
+                          withFont:font
+                         withColor:fontColor
+                     textAlignment:NSTextAlignmentLeft
+                 verticalAlignment:NSVerticalAlignmentTop];
+            }else if (note.image != nil){
+                CGRect imageRect = CGRectMake(100, yAxix, 100, 100);
+                [generator addImage:note.image inRect:imageRect];
+            }
+            yAxix += 20;
+        }
+    }
+    
+    [generator finishPDF];
+}
+
+- (NSString *)getPDFPath {
+    NSString *newPDFName = [NSString stringWithFormat:@"%@.pdf", DOCUMENT_NAME];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return  [documentsDirectory stringByAppendingPathComponent:newPDFName];
 }
 
 @end

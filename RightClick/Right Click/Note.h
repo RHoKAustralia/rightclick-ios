@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Note : NSObject
 @property(nonatomic, strong)NSString *instruction;
 @property(nonatomic, strong)NSString *imagePath;
+@property(nonatomic, strong)UIImage *image;
 @end

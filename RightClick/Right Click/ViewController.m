@@ -13,9 +13,10 @@
 #import "Lesson.h"
 #import "DataService.h"
 
-@interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, NoteViewControllerDelegate>
+@interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, NoteViewControllerDelegate, UIDocumentInteractionControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *notesTableView;
 @property(nonatomic, strong)Lesson *lesson;
+@property(nonatomic, strong)UIDocumentInteractionController *documentInteractionController;
 @end
 
 @implementation ViewController
@@ -44,6 +45,25 @@
 }
 
 - (IBAction)exportNote:(id)sender {
+    
+    [[DataService sharedManager] generatePDFWithLesson:self.lesson];
+    
+    NSURL *URL = [[NSURL alloc] initFileURLWithPath:[[DataService sharedManager] getPDFPath]];
+    
+    if (URL) {
+        // Initialize Document Interaction Controller
+        self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:URL];
+        
+        // Configure Document Interaction Controller
+        [self.documentInteractionController setDelegate:self];
+        
+        // Preview PDF
+        [self.documentInteractionController presentPreviewAnimated:YES];
+    }
+}
+
+- (UIViewController *) documentInteractionControllerViewControllerForPreview: (UIDocumentInteractionController *) controller {
+    return self;
 }
 
 -(void)didEnterTextNote:(NSString *)text {
