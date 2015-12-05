@@ -13,6 +13,8 @@
 		211978C01C12B52E009CE0A5 /* JLPDFGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978BF1C12B52E009CE0A5 /* JLPDFGenerator.m */; };
 		2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2135A6611C128BA1004A5890 /* NoteViewController.m */; };
 		21A2421E1C12B5CE0009314E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A2421D1C12B5CE0009314E /* CoreGraphics.framework */; };
+		21A242221C12DA910009314E /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A242211C12DA910009314E /* AnnotationViewController.m */; };
+		21A242261C1306960009314E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21A242251C1306960009314E /* fontawesome-webfont.ttf */; };
 		21A425081C127C8A00ED9EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A425071C127C8A00ED9EFF /* main.m */; };
 		21A4250B1C127C8A00ED9EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250A1C127C8A00ED9EFF /* AppDelegate.m */; };
 		21A4250E1C127C8A00ED9EFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250D1C127C8A00ED9EFF /* ViewController.m */; };
@@ -47,6 +49,9 @@
 		2135A6611C128BA1004A5890 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		21A2421D1C12B5CE0009314E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		21A2421F1C12C6760009314E /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		21A242201C12DA910009314E /* AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationViewController.h; sourceTree = "<group>"; };
+		21A242211C12DA910009314E /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
+		21A242251C1306960009314E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		21A425031C127C8A00ED9EFF /* Right Click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right Click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A425071C127C8A00ED9EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A425091C127C8A00ED9EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,9 +143,12 @@
 				21A4250D1C127C8A00ED9EFF /* ViewController.m */,
 				2135A6601C128BA1004A5890 /* NoteViewController.h */,
 				2135A6611C128BA1004A5890 /* NoteViewController.m */,
+				21A242201C12DA910009314E /* AnnotationViewController.h */,
+				21A242211C12DA910009314E /* AnnotationViewController.m */,
 				21A4250F1C127C8A00ED9EFF /* Main.storyboard */,
 				21A425121C127C8A00ED9EFF /* Assets.xcassets */,
 				21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */,
+				21A242251C1306960009314E /* fontawesome-webfont.ttf */,
 				21A425171C127C8A00ED9EFF /* Info.plist */,
 				21A425061C127C8A00ED9EFF /* Supporting Files */,
 			);
@@ -234,6 +242,7 @@
 				TargetAttributes = {
 					21A425021C127C8A00ED9EFF = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 5AXRG4S9YB;
 					};
 					21A4251B1C127C8B00ED9EFF = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -266,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21A425161C127C8A00ED9EFF /* LaunchScreen.storyboard in Resources */,
+				21A242261C1306960009314E /* fontawesome-webfont.ttf in Resources */,
 				21A425131C127C8A00ED9EFF /* Assets.xcassets in Resources */,
 				21A425111C127C8A00ED9EFF /* Main.storyboard in Resources */,
 			);
@@ -341,6 +351,7 @@
 				211978B91C129C16009CE0A5 /* Lesson.m in Sources */,
 				21A4250B1C127C8A00ED9EFF /* AppDelegate.m in Sources */,
 				21A425081C127C8A00ED9EFF /* main.m in Sources */,
+				21A242221C12DA910009314E /* AnnotationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +480,7 @@
 			baseConfigurationReference = E30DD50A5509F176240BBE1D /* Pods-Right Click.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Right Click/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rhok.Right-Click";
@@ -481,6 +493,7 @@
 			baseConfigurationReference = B27AEA0C5A6FC14F4B8075B0 /* Pods-Right Click.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Right Click/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rhok.Right-Click";

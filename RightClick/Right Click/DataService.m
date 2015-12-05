@@ -45,6 +45,7 @@
     }
     
     NSLog(@"Added note to lesson");
+    
     [lesson.notes addObject:note];
 }
 
@@ -93,21 +94,37 @@
     int yAxix = 100;
     
     @autoreleasepool {
-        for (Note *note in lesson.notes) {
+        
+        for (int i = 0; i < lesson.notes.count; i++) {
+            
+            Note *note = [lesson.notes objectAtIndex:i];
+            
             if ([note.instruction length] != 0) {
+                
+                // Add index number
+                NSString *instruction = [NSString stringWithFormat:@"%d. %@", i + 1, note.instruction];
+                
                 CGRect textRect = CGRectMake(100, yAxix, 100, 100);
-                [generator addText:note.instruction
+                [generator addText:instruction
                          withFrame:textRect
                           withFont:font
                          withColor:fontColor
                      textAlignment:NSTextAlignmentLeft
                  verticalAlignment:NSVerticalAlignmentTop];
+                yAxix += 20;
             }else if (note.image != nil){
-                CGRect imageRect = CGRectMake(100, yAxix, 100, 100);
+                CGRect imageRect = CGRectMake(100, yAxix, IMAGE_WIDTH / 2, IMAGE_HEIGHT / 2);
                 [generator addImage:note.image inRect:imageRect];
+                yAxix += 20 + IMAGE_HEIGHT / 2;
             }
-            yAxix += 20;
+            
+            // Reset Y Axis and start a new page
+            if (yAxix >= 820) {
+                [generator addPageToPDF];
+                yAxix = 100;
+            }
         }
+        
     }
     
     [generator finishPDF];

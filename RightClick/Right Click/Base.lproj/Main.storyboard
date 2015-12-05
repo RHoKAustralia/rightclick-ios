@@ -20,22 +20,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fxy-7d-65X">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="1Sv-IP-LH9"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="4Ob-Vx-6jt"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3WV-AT-mvc"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fxy-7d-65X" secondAttribute="bottom" id="SdN-0u-bZI"/>
-                            <constraint firstAttribute="trailing" secondItem="Fxy-7d-65X" secondAttribute="trailing" id="fAU-a7-INt"/>
-                            <constraint firstItem="Fxy-7d-65X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vS6-rG-nWh"/>
-                            <constraint firstItem="Fxy-7d-65X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z85-Hf-cAo"/>
+                            <constraint firstItem="Fxy-7d-65X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8d2-Td-Jsa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fxy-7d-65X" secondAttribute="trailing" constant="-20" id="AQq-Xe-kPi"/>
+                            <constraint firstItem="Fxy-7d-65X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gzP-pb-BFF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SDl-i8-iSr">
@@ -101,6 +102,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-6N-KTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969" y="353"/>
+        </scene>
+        <!--Annotation View Controller-->
+        <scene sceneID="NOs-n3-WSm">
+            <objects>
+                <viewController storyboardIdentifier="AnnotationViewController" id="kvZ-AK-XHS" customClass="AnnotationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gLC-wQ-tGF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bqe-ld-mCB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s45-mU-G68">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lLK-Vx-SZq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLK-Vx-SZq" firstAttribute="top" secondItem="s45-mU-G68" secondAttribute="top" id="3oc-br-xjD"/>
+                            <constraint firstItem="lLK-Vx-SZq" firstAttribute="width" secondItem="s45-mU-G68" secondAttribute="width" id="RXp-c5-2vP"/>
+                            <constraint firstItem="lLK-Vx-SZq" firstAttribute="leading" secondItem="s45-mU-G68" secondAttribute="leading" id="UzN-sQ-exm"/>
+                            <constraint firstItem="lLK-Vx-SZq" firstAttribute="height" secondItem="s45-mU-G68" secondAttribute="height" id="zbZ-uB-oUW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lLK-Vx-SZq" id="iLy-eg-mTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHt-aP-VYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="536"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Xgh-pj-clT">

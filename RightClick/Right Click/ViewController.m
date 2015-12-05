@@ -12,11 +12,13 @@
 #import "Note.h"
 #import "Lesson.h"
 #import "DataService.h"
+#import "AnnotationViewController.h"
 
-@interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, NoteViewControllerDelegate, UIDocumentInteractionControllerDelegate>
+@interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NoteViewControllerDelegate, UIDocumentInteractionControllerDelegate, AnnotationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *notesTableView;
 @property(nonatomic, strong)Lesson *lesson;
 @property(nonatomic, strong)UIDocumentInteractionController *documentInteractionController;
+@property(nonatomic, strong)NSDictionary * mediaInfo;
 @end
 
 @implementation ViewController
@@ -32,6 +34,13 @@
     self.lesson.mentorEmail = @"testMentor@email.com";
     self.lesson.menteeEmail = @"testMentee@email.com";
     self.lesson.startDate = [NSDate date];
+    
+    [self.notesTableView setEditing:YES animated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (IBAction)addNote:(id)sender {
@@ -71,6 +80,16 @@
     [self.notesTableView reloadData];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    Note *noteToMove = [self.lesson.notes objectAtIndex:sourceIndexPath.row];
+    [self.lesson.notes removeObjectAtIndex:sourceIndexPath.row];
+    [self.lesson.notes insertObject:noteToMove atIndex:destinationIndexPath.row];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.lesson.notes.count;
 }
@@ -80,14 +99,28 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"] ;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyIdentifier"];
     }
+    
+    cell.showsReorderControl = YES;
     
     Note *note = [self.lesson.notes objectAtIndex:indexPath.row];
     
-    NSString *tableText = note.instruction.length == 0 ? @"Image Note" : note.instruction;
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@", (long)indexPath.row + 1, tableText];
+    if (note.instruction.length == 0) {
+        cell.textLabel.text = @"Image Note";
+        cell.imageView.image = note.image;
+    }else {
+        cell.textLabel.text = note.instruction;
+    }
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.lesson.notes removeObjectAtIndex:indexPath.row];
+        [self.notesTableView reloadData];
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -98,7 +131,9 @@
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:picker animated:YES completion:NULL];
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self presentViewController:picker animated:YES completion:nil];
+        });
     }else if (buttonIndex == 1){
         NSLog(@"Add Text Note");
         NoteViewController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"NoteViewController"];
@@ -108,16 +143,21 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    [[DataService sharedManager] addNoteWithText:nil andImage:chosenImage mediaInfo:info lesson:self.lesson];
-    [self.notesTableView reloadData];
+    self.mediaInfo = info;
+    
+    AnnotationViewController *annotationView = [self.storyboard instantiateViewControllerWithIdentifier:@"AnnotationViewController"];
+    annotationView.delegate = self;
+    annotationView.imageToAnnotate = chosenImage;
+    [self.navigationController pushViewController:annotationView animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)didAnnotateImage:(UIImage *)uiImage {
+    [[DataService sharedManager] addNoteWithText:nil andImage:uiImage mediaInfo:self.mediaInfo lesson:self.lesson];
+    [self.notesTableView reloadData];
 }
 
 @end
