@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fxy-7d-65X">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4Ob-Vx-6jt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3WV-AT-mvc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fxy-7d-65X" secondAttribute="bottom" id="SdN-0u-bZI"/>
+                            <constraint firstAttribute="trailing" secondItem="Fxy-7d-65X" secondAttribute="trailing" id="fAU-a7-INt"/>
+                            <constraint firstItem="Fxy-7d-65X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vS6-rG-nWh"/>
+                            <constraint firstItem="Fxy-7d-65X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z85-Hf-cAo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SDl-i8-iSr">
                         <rightBarButtonItems>
@@ -34,10 +52,55 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="notesTableView" destination="Fxy-7d-65X" id="3lA-Fj-icd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276" y="353"/>
+        </scene>
+        <!--Add Note-->
+        <scene sceneID="H3z-KP-XZv">
+            <objects>
+                <viewController storyboardIdentifier="NoteViewController" title="Add Note" id="DtO-ib-Zki" customClass="NoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kXc-LQ-FO6"/>
+                        <viewControllerLayoutGuide type="bottom" id="XyP-sC-jRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AyQ-k0-ba8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instructions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spf-ts-fqF">
+                                <rect key="frame" x="20" y="83" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="spf-ts-fqF" firstAttribute="trailing" secondItem="AyQ-k0-ba8" secondAttribute="trailingMargin" id="K3Z-Y3-ZWy"/>
+                            <constraint firstItem="spf-ts-fqF" firstAttribute="leading" secondItem="AyQ-k0-ba8" secondAttribute="leadingMargin" id="VJt-II-xpz"/>
+                            <constraint firstItem="spf-ts-fqF" firstAttribute="top" secondItem="kXc-LQ-FO6" secondAttribute="bottom" constant="19" id="xhB-gd-9Ob"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q2T-HS-Y5G">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7M1-gJ-ZTU">
+                            <connections>
+                                <action selector="save:" destination="DtO-ib-Zki" id="BNk-oh-hsV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="instructions" destination="spf-ts-fqF" id="qrc-ma-Yt7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-6N-KTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969" y="353"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Xgh-pj-clT">
@@ -57,6 +120,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYi-Fz-tpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="347" y="1013"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ms1-F8-zgd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rg7-UL-M4M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2YH-Un-b4r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DtO-ib-Zki" kind="relationship" relationship="rootViewController" id="xW6-h0-PJE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yoc-5e-2ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="1113"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211978B61C129B03009CE0A5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978B51C129B03009CE0A5 /* Note.m */; };
+		211978B91C129C16009CE0A5 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978B81C129C16009CE0A5 /* Lesson.m */; };
+		211978BC1C129D96009CE0A5 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 211978BB1C129D96009CE0A5 /* DataService.m */; };
+		2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2135A6611C128BA1004A5890 /* NoteViewController.m */; };
 		21A425081C127C8A00ED9EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A425071C127C8A00ED9EFF /* main.m */; };
 		21A4250B1C127C8A00ED9EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250A1C127C8A00ED9EFF /* AppDelegate.m */; };
 		21A4250E1C127C8A00ED9EFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A4250D1C127C8A00ED9EFF /* ViewController.m */; };
@@ -14,6 +18,7 @@
 		21A425131C127C8A00ED9EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A425121C127C8A00ED9EFF /* Assets.xcassets */; };
 		21A425161C127C8A00ED9EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */; };
 		21A425211C127C8B00ED9EFF /* Right_ClickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A425201C127C8B00ED9EFF /* Right_ClickTests.m */; };
+		53FA619EC63A7D0A6A0FBB04 /* libPods-Right Click.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078A2D03421F994AE5380BA8 /* libPods-Right Click.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078A2D03421F994AE5380BA8 /* libPods-Right Click.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Right Click.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		211978B41C129B03009CE0A5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		211978B51C129B03009CE0A5 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		211978B71C129C16009CE0A5 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		211978B81C129C16009CE0A5 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
+		211978BA1C129D96009CE0A5 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		211978BB1C129D96009CE0A5 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		2135A6601C128BA1004A5890 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		2135A6611C128BA1004A5890 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		21A425031C127C8A00ED9EFF /* Right Click.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right Click.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A425071C127C8A00ED9EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A425091C127C8A00ED9EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +54,8 @@
 		21A4251C1C127C8B00ED9EFF /* Right ClickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Right ClickTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A425201C127C8B00ED9EFF /* Right_ClickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Right_ClickTests.m; sourceTree = "<group>"; };
 		21A425221C127C8B00ED9EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27AEA0C5A6FC14F4B8075B0 /* Pods-Right Click.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Right Click.release.xcconfig"; path = "Pods/Target Support Files/Pods-Right Click/Pods-Right Click.release.xcconfig"; sourceTree = "<group>"; };
+		E30DD50A5509F176240BBE1D /* Pods-Right Click.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Right Click.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Right Click/Pods-Right Click.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FA619EC63A7D0A6A0FBB04 /* libPods-Right Click.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +77,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211978B31C129ADB009CE0A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				211978B41C129B03009CE0A5 /* Note.h */,
+				211978B51C129B03009CE0A5 /* Note.m */,
+				211978B71C129C16009CE0A5 /* Lesson.h */,
+				211978B81C129C16009CE0A5 /* Lesson.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		21A424FA1C127C8A00ED9EFF = {
 			isa = PBXGroup;
 			children = (
 				21A425051C127C8A00ED9EFF /* Right Click */,
 				21A4251F1C127C8B00ED9EFF /* Right ClickTests */,
 				21A425041C127C8A00ED9EFF /* Products */,
+				960B3C17F69982B8138E424B /* Pods */,
+				713CB63287ABABA191898479 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +111,15 @@
 		21A425051C127C8A00ED9EFF /* Right Click */ = {
 			isa = PBXGroup;
 			children = (
+				211978B31C129ADB009CE0A5 /* Models */,
 				21A425091C127C8A00ED9EFF /* AppDelegate.h */,
 				21A4250A1C127C8A00ED9EFF /* AppDelegate.m */,
 				21A4250C1C127C8A00ED9EFF /* ViewController.h */,
 				21A4250D1C127C8A00ED9EFF /* ViewController.m */,
+				2135A6601C128BA1004A5890 /* NoteViewController.h */,
+				2135A6611C128BA1004A5890 /* NoteViewController.m */,
+				211978BA1C129D96009CE0A5 /* DataService.h */,
+				211978BB1C129D96009CE0A5 /* DataService.m */,
 				21A4250F1C127C8A00ED9EFF /* Main.storyboard */,
 				21A425121C127C8A00ED9EFF /* Assets.xcassets */,
 				21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */,
@@ -111,6 +146,23 @@
 			path = "Right ClickTests";
 			sourceTree = "<group>";
 		};
+		713CB63287ABABA191898479 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				078A2D03421F994AE5380BA8 /* libPods-Right Click.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		960B3C17F69982B8138E424B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E30DD50A5509F176240BBE1D /* Pods-Right Click.debug.xcconfig */,
+				B27AEA0C5A6FC14F4B8075B0 /* Pods-Right Click.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A425251C127C8B00ED9EFF /* Build configuration list for PBXNativeTarget "Right Click" */;
 			buildPhases = (
+				DB83A103D85EFAC7C0DFB8A7 /* Check Pods Manifest.lock */,
 				21A424FF1C127C8A00ED9EFF /* Sources */,
 				21A425001C127C8A00ED9EFF /* Frameworks */,
 				21A425011C127C8A00ED9EFF /* Resources */,
+				1A27EFF3D9AE1EEC95FA18EE /* Embed Pods Frameworks */,
+				FEB77EACB9FEB61703B3221F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,12 +261,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A27EFF3D9AE1EEC95FA18EE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Right Click/Pods-Right Click-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB83A103D85EFAC7C0DFB8A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB77EACB9FEB61703B3221F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Right Click/Pods-Right Click-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21A424FF1C127C8A00ED9EFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211978B61C129B03009CE0A5 /* Note.m in Sources */,
+				211978BC1C129D96009CE0A5 /* DataService.m in Sources */,
+				2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */,
 				21A4250E1C127C8A00ED9EFF /* ViewController.m in Sources */,
+				211978B91C129C16009CE0A5 /* Lesson.m in Sources */,
 				21A4250B1C127C8A00ED9EFF /* AppDelegate.m in Sources */,
 				21A425081C127C8A00ED9EFF /* main.m in Sources */,
 			);
@@ -339,6 +446,7 @@
 		};
 		21A425261C127C8B00ED9EFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30DD50A5509F176240BBE1D /* Pods-Right Click.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Right Click/Info.plist";
@@ -350,6 +458,7 @@
 		};
 		21A425271C127C8B00ED9EFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27AEA0C5A6FC14F4B8075B0 /* Pods-Right Click.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Right Click/Info.plist";
@@ -402,6 +511,7 @@
 				21A425271C127C8B00ED9EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21A425281C127C8B00ED9EFF /* Build configuration list for PBXNativeTarget "Right ClickTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +520,7 @@
 				21A4252A1C127C8B00ED9EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

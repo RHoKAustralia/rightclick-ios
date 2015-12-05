@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'Right Click' do
-
+pod "AFNetworking"
 end
 
 target 'Right ClickTests' do
