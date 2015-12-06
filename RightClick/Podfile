@@ -7,6 +7,7 @@ target 'Right Click' do
 pod "AFNetworking"
 pod "jot"
 pod "IQKeyboardManager"
+pod "TSMessages"
 end
 
 target 'Right ClickTests' do

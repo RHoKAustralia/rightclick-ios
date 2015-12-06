@@ -7,12 +7,15 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking/AFNetworking.h>
+#import <TSMessages/TSMessageView.h>
 
 #import "NoteViewController.h"
 #import "Note.h"
 #import "Lesson.h"
 #import "DataService.h"
 #import "AnnotationViewController.h"
+#import "Config.h"
 
 @interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NoteViewControllerDelegate, UIDocumentInteractionControllerDelegate, AnnotationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *notesTableView;
@@ -72,8 +75,42 @@
 
 - (IBAction)exportNote:(id)sender {
     
-    [[DataService sharedManager] generatePDFWithLesson:self.lesson];
+    NSURL *url = [NSURL URLWithString:POST_URL];
     
+    [TSMessage showNotificationWithTitle:@"Please Wait"
+                                subtitle:@"Hold On, We are sending your notes to the cloud"
+                                    type:TSMessageNotificationTypeWarning];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:API_KEY forHTTPHeaderField:@"x-api-key"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *jsonString = [[DataService sharedManager] getJsonStringWithLesson:self.lesson];
+    [request setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    AFHTTPRequestOperation *operation = [manager HTTPRequestOperationWithRequest:request
+                                                                         success:^(AFHTTPRequestOperation * operation, id responseObject) {
+                                                                             NSLog(@"Success from Server");
+                                                                             
+                                                                             [TSMessage showNotificationWithTitle:@"Awesome !"
+                                                                                                         subtitle:@"Your notes are on the Cloud"
+                                                                                                             type:TSMessageNotificationTypeSuccess];
+                                                                             
+                                                                         } failure:^(AFHTTPRequestOperation *operation, NSError * error) {
+                                                                             NSLog(@"Error %@", error);
+                                                                             [TSMessage showNotificationWithTitle:@"Oops!"
+                                                                                                         subtitle:@"Can't post to the Cloud at the moment"
+                                                                                                             type:TSMessageNotificationTypeError];
+                                                                         }];
+    [operation start];
+    [self pdfExport];
+}
+
+- (void)pdfExport {
+    [[DataService sharedManager] generatePDFWithLesson:self.lesson];
     NSURL *URL = [[NSURL alloc] initFileURLWithPath:[[DataService sharedManager] getPDFPath]];
     
     if (URL) {

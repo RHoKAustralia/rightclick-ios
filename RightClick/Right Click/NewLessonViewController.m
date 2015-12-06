@@ -62,12 +62,12 @@
 - (IBAction)AddNotes:(id)sender {
     
     Lesson *lesson = [Lesson new];
-    lesson.lessonTitle = self.lessonTextField.text;
-    lesson.tutorName = self.tutorNameTextField.text;
-    lesson.tutorEmail = self.tutorEmailTextField.text;
-    lesson.studentName = self.studentNameTextField.text;
-    lesson.deviceType = self.deviceTypeTextField.text;
-    lesson.studentEmail = self.studentEmailTextField.text;
+    lesson.lessonTitle = self.lessonTextField.text.length == 0 ? @"" : self.lessonTextField.text;
+    lesson.tutorName = self.tutorNameTextField.text.length == 0 ? @"" : self.tutorNameTextField.text;
+    lesson.tutorEmail = self.tutorEmailTextField.text.length == 0 ? @"" : self.tutorEmailTextField.text;
+    lesson.studentName = self.studentNameTextField.text.length == 0 ? @"" : self.studentNameTextField.text;
+    lesson.deviceType = self.deviceTypeTextField.text.length == 0 ? @"" : self.deviceTypeTextField.text;
+    lesson.studentEmail = self.studentEmailTextField.text.length == 0 ? @"" : self.studentEmailTextField.text;
     lesson.startDate = [NSDate date];
     lesson.notes = [NSMutableArray new];
     

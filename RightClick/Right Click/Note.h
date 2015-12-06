@@ -12,5 +12,6 @@
 @interface Note : NSObject
 @property(nonatomic, strong)NSString *instruction;
 @property(nonatomic, strong)NSString *imagePath;
+@property(nonatomic, strong)NSString *imageBase64;
 @property(nonatomic, strong)UIImage *image;
 @end

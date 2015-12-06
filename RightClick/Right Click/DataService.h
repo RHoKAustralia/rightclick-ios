@@ -22,4 +22,5 @@
 
 -(void)generatePDFWithLesson:(Lesson *)lesson;
 - (NSString *)getPDFPath;
+- (NSString *)getJsonStringWithLesson:(Lesson *)lesson;
 @end

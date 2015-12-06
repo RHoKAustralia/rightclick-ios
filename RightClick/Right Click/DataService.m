@@ -41,12 +41,75 @@
         // Save Scaled Image
         note.imagePath = [self saveImage:image mediaInfo:mediaInfo];
         note.image = image;
+        note.imageBase64 = [self encodeToBase64String:note.image];
         NSLog(@"Image Path %@", note.imagePath);
     }
     
     NSLog(@"Added note to lesson");
     
     [lesson.notes addObject:note];
+}
+
+- (NSString *)getJsonStringWithLesson:(Lesson *)lesson {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    
+    lesson.endDate = [NSDate date];
+    
+    NSMutableArray *steps = [NSMutableArray new];
+    
+    @autoreleasepool {
+        for (int i=0; i < lesson.notes.count; i++) {
+            
+            Note *note = [lesson.notes objectAtIndex:i];
+            
+            NSString *data = @"";
+            NSString *type = @"";
+            
+            if (note.image) {
+                // Image
+                data = note.imageBase64;
+                type = @"photo";
+            }else {
+                // Text
+                data = note.instruction;
+                type = @"text";
+            }
+            
+            int count = i + 1;
+            NSString *sequence = [NSString stringWithFormat:@"%d", count];
+            
+            NSDictionary *stepDictionary = @{@"type": type, @"data": data, @"sequence_no" : sequence };
+            [steps addObject:stepDictionary];
+        }
+    }
+    
+    NSDictionary *jsonDictionary = @{@"title" : lesson.lessonTitle,
+                                     @"tutor_email" : lesson.tutorEmail,
+                                     @"tutor_name" : lesson.tutorName,
+                                     @"student_name" : lesson.studentName,
+                                     @"student_email" : lesson.studentEmail,
+                                     @"start_time": [dateFormatter stringFromDate:lesson.startDate],
+                                     @"end_time": [dateFormatter stringFromDate:lesson.endDate],
+                                     @"steps": steps };
+    
+    NSError *error = nil;
+    NSData *json;
+    
+    // Dictionary convertable to JSON ?
+    if ([NSJSONSerialization isValidJSONObject:jsonDictionary]) {
+        // Serialize the dictionary
+        json = [NSJSONSerialization dataWithJSONObject:jsonDictionary options:NSJSONWritingPrettyPrinted error:&error];
+        
+        // If no errors, let's view the JSON
+        if (json != nil && error == nil) {
+            NSLog(@"Export JSON Succesfully:");
+            return [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+        }
+    }
+    
+    return nil;
 }
 
 -(NSString *)saveImage:(UIImage *)imageToSave mediaInfo:(NSDictionary *)mediaInfo {
@@ -135,6 +198,10 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     return  [documentsDirectory stringByAppendingPathComponent:newPDFName];
+}
+
+- (NSString *)encodeToBase64String:(UIImage *)image {
+    return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
 
 @end
