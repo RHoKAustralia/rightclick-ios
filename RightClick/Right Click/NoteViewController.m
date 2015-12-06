@@ -8,7 +8,7 @@
 
 #import "NoteViewController.h"
 
-@interface NoteViewController ()
+@interface NoteViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *instructions;
 @end
 
@@ -17,8 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Add Text Note";
+    self.instructions.delegate = self;
     [self.instructions becomeFirstResponder];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.instructions) {
+        [textField resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 - (IBAction)save:(id)sender {
     [self.delegate didEnterTextNote:self.instructions.text];
     [self.navigationController popViewControllerAnimated:YES];
