@@ -154,7 +154,7 @@
     [generator setupPDFDocumentNamed:DOCUMENT_NAME withSize:kSizeA4Portrait];
     [generator beginPDFPage];
     
-    int yAxix = 100;
+    int yAxix = 50;
     
     @autoreleasepool {
         
@@ -167,7 +167,7 @@
                 // Add index number
                 NSString *instruction = [NSString stringWithFormat:@"%d. %@", i + 1, note.instruction];
                 
-                CGRect textRect = CGRectMake(100, yAxix, 100, 100);
+                CGRect textRect = CGRectMake(50, yAxix, 595, 100);
                 [generator addText:instruction
                          withFrame:textRect
                           withFont:font
@@ -176,15 +176,15 @@
                  verticalAlignment:NSVerticalAlignmentTop];
                 yAxix += 20;
             }else if (note.image != nil){
-                CGRect imageRect = CGRectMake(100, yAxix, IMAGE_WIDTH / 2, IMAGE_HEIGHT / 2);
+                CGRect imageRect = CGRectMake(50, yAxix, IMAGE_WIDTH / 2, IMAGE_HEIGHT / 2);
                 [generator addImage:note.image inRect:imageRect];
                 yAxix += 20 + IMAGE_HEIGHT / 2;
             }
             
             // Reset Y Axis and start a new page
-            if (yAxix >= 820) {
+            if (yAxix >= 700) {
                 [generator addPageToPDF];
-                yAxix = 100;
+                yAxix = 50;
             }
         }
         
