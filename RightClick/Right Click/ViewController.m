@@ -41,10 +41,10 @@
 
 -(void)home:(UIBarButtonItem *)sender {
     
-    UIAlertController * alertConfirmation = [UIAlertController
-                                             alertControllerWithTitle:@"New Lesson"
-                                             message:@"This will remove All Notes, Are you Sure ?"
-                                             preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertConfirmation = [UIAlertController
+                                            alertControllerWithTitle:@"New Lesson"
+                                            message:@"This will remove All Notes, Are you Sure ?"
+                                            preferredStyle:UIAlertControllerStyleAlert];
     
     [self presentViewController:alertConfirmation animated:YES completion:nil];
     
@@ -55,7 +55,15 @@
                                {
                                    [self.navigationController popToRootViewControllerAnimated:YES];
                                }];
+    
+    UIAlertAction* cancelAction = [UIAlertAction
+                               actionWithTitle:@"Cancel"
+                               style:UIAlertActionStyleCancel
+                               handler:nil];
+    
     [alertConfirmation addAction:okAction];
+    [alertConfirmation addAction:cancelAction];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
