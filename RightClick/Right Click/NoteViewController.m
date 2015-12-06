@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Add Text Note";
+    [self.instructions becomeFirstResponder];
 }
 - (IBAction)save:(id)sender {
     [self.delegate didEnterTextNote:self.instructions.text];

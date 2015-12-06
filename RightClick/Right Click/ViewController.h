@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Lesson;
+
 @interface ViewController : UIViewController
-
-
+@property(nonatomic, strong)Lesson *lesson;
 @end
 

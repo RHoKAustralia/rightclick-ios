@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e2E-CD-jcu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jvK-xu-doL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="353"/>
+            <point key="canvasLocation" x="2088" y="353"/>
         </scene>
         <!--Add Note-->
         <scene sceneID="H3z-KP-XZv">
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-6N-KTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969" y="353"/>
+            <point key="canvasLocation" x="2781" y="353"/>
         </scene>
         <!--Annotation View Controller-->
         <scene sceneID="NOs-n3-WSm">
@@ -135,7 +135,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHt-aP-VYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2673" y="536"/>
+            <point key="canvasLocation" x="3485" y="536"/>
+        </scene>
+        <!--Right Click-->
+        <scene sceneID="Hkb-tg-39F">
+            <objects>
+                <viewController title="Right Click" id="Xzl-kw-ftX" customClass="NewLessonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wqx-J8-BnC"/>
+                        <viewControllerLayoutGuide type="bottom" id="N15-g7-KoY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IH7-Ak-kFk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Eh-ze-fcr">
+                                <rect key="frame" x="150" y="87" width="300" height="280"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lesson Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RT-hs-J0v">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tutor Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-a5-Zyb">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tutor Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uwt-Bf-KPO">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Qh-J3-laD">
+                                        <rect key="frame" x="0.0" y="150" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CtJ-Jf-noz">
+                                        <rect key="frame" x="0.0" y="200" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="045-xM-1PB">
+                                        <rect key="frame" x="0.0" y="250" width="300" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YUq-E3-oh1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Eh-ze-fcr" firstAttribute="centerX" secondItem="IH7-Ak-kFk" secondAttribute="centerX" id="Sas-0x-Q22"/>
+                            <constraint firstItem="5Eh-ze-fcr" firstAttribute="top" secondItem="Wqx-J8-BnC" secondAttribute="bottom" constant="23" id="fBC-jE-vXS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zow-jd-SHD">
+                        <barButtonItem key="rightBarButtonItem" title="Add Notes" id="9GM-Zi-n25">
+                            <connections>
+                                <action selector="AddNotes:" destination="Xzl-kw-ftX" id="teB-Z1-92b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deviceTypeTextField" destination="045-xM-1PB" id="jZh-8v-fds"/>
+                        <outlet property="lessonTextField" destination="9RT-hs-J0v" id="raN-sH-79n"/>
+                        <outlet property="studentEmailTextField" destination="CtJ-Jf-noz" id="Teh-Qy-M6l"/>
+                        <outlet property="studentNameTextField" destination="3Qh-J3-laD" id="aBU-jT-GhD"/>
+                        <outlet property="tutorEmailTextField" destination="uwt-Bf-KPO" id="NWR-C4-W3b"/>
+                        <outlet property="tutorNameTextField" destination="uAD-a5-Zyb" id="KQg-dE-G5u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKV-6u-cFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="98"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Xgh-pj-clT">
@@ -174,6 +259,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yoc-5e-2ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1951" y="1113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="De7-la-NYR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvK-xu-doL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TlI-KS-XuP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xzl-kw-ftX" kind="relationship" relationship="rootViewController" id="mMh-Lh-ZDJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayJ-Pg-wJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="184"/>
         </scene>
     </scenes>
 </document>

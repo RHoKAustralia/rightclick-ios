@@ -22,6 +22,7 @@
 		21A425131C127C8A00ED9EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A425121C127C8A00ED9EFF /* Assets.xcassets */; };
 		21A425161C127C8A00ED9EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */; };
 		21A425211C127C8B00ED9EFF /* Right_ClickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A425201C127C8B00ED9EFF /* Right_ClickTests.m */; };
+		21F9CE6F1C13997800107E9D /* NewLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9CE6E1C13997800107E9D /* NewLessonViewController.m */; };
 		53FA619EC63A7D0A6A0FBB04 /* libPods-Right Click.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078A2D03421F994AE5380BA8 /* libPods-Right Click.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		21A4251C1C127C8B00ED9EFF /* Right ClickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Right ClickTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A425201C127C8B00ED9EFF /* Right_ClickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Right_ClickTests.m; sourceTree = "<group>"; };
 		21A425221C127C8B00ED9EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21F9CE6D1C13997800107E9D /* NewLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewLessonViewController.h; sourceTree = "<group>"; };
+		21F9CE6E1C13997800107E9D /* NewLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewLessonViewController.m; sourceTree = "<group>"; };
 		B27AEA0C5A6FC14F4B8075B0 /* Pods-Right Click.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Right Click.release.xcconfig"; path = "Pods/Target Support Files/Pods-Right Click/Pods-Right Click.release.xcconfig"; sourceTree = "<group>"; };
 		E30DD50A5509F176240BBE1D /* Pods-Right Click.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Right Click.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Right Click/Pods-Right Click.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +148,8 @@
 				2135A6611C128BA1004A5890 /* NoteViewController.m */,
 				21A242201C12DA910009314E /* AnnotationViewController.h */,
 				21A242211C12DA910009314E /* AnnotationViewController.m */,
+				21F9CE6D1C13997800107E9D /* NewLessonViewController.h */,
+				21F9CE6E1C13997800107E9D /* NewLessonViewController.m */,
 				21A4250F1C127C8A00ED9EFF /* Main.storyboard */,
 				21A425121C127C8A00ED9EFF /* Assets.xcassets */,
 				21A425141C127C8A00ED9EFF /* LaunchScreen.storyboard */,
@@ -344,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				211978B61C129B03009CE0A5 /* Note.m in Sources */,
+				21F9CE6F1C13997800107E9D /* NewLessonViewController.m in Sources */,
 				211978BC1C129D96009CE0A5 /* DataService.m in Sources */,
 				211978C01C12B52E009CE0A5 /* JLPDFGenerator.m in Sources */,
 				2135A6621C128BA1004A5890 /* NoteViewController.m in Sources */,

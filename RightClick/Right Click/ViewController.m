@@ -16,7 +16,6 @@
 
 @interface ViewController ()<UIActionSheetDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NoteViewControllerDelegate, UIDocumentInteractionControllerDelegate, AnnotationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *notesTableView;
-@property(nonatomic, strong)Lesson *lesson;
 @property(nonatomic, strong)UIDocumentInteractionController *documentInteractionController;
 @property(nonatomic, strong)NSDictionary * mediaInfo;
 @end
@@ -25,17 +24,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"New Lesson"
+                                                                      style:UIBarButtonItemStyleDone
+                                                                     target:self action:@selector(home:)];
+    self.navigationItem.leftBarButtonItem = newBackButton;
+    
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.lesson = [Lesson new];
-    self.lesson.notes = [NSMutableArray new];
-    
-    self.lesson.name = @"New lesson";
-    self.lesson.mentorEmail = @"testMentor@email.com";
-    self.lesson.menteeEmail = @"testMentee@email.com";
-    self.lesson.startDate = [NSDate date];
-    
     [self.notesTableView setEditing:YES animated:YES];
+    
+    self.title = self.lesson.lessonTitle;
+}
+
+-(void)home:(UIBarButtonItem *)sender {
+    
+    UIAlertController * alertConfirmation = [UIAlertController
+                                             alertControllerWithTitle:@"New Lesson"
+                                             message:@"This will remove All Notes, Are you Sure ?"
+                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alertConfirmation animated:YES completion:nil];
+    
+    UIAlertAction* okAction = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action)
+                               {
+                                   [self.navigationController popToRootViewControllerAnimated:YES];
+                               }];
+    [alertConfirmation addAction:okAction];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface Lesson : NSObject
-@property(nonatomic, strong)NSString *name;
-@property(nonatomic, strong)NSString *mentorEmail;
-@property(nonatomic, strong)NSString *menteeEmail;
+@property(nonatomic, strong)NSString *lessonTitle;
+@property(nonatomic, strong)NSString *tutorName;
+@property(nonatomic, strong)NSString *tutorEmail;
+@property(nonatomic, strong)NSString *studentName;
+@property(nonatomic, strong)NSString *studentEmail;
+@property(nonatomic, strong)NSString *deviceType;
 @property(nonatomic, strong)NSMutableArray *notes;
 @property(nonatomic, strong)NSDate *startDate;
 @property(nonatomic, strong)NSDate *endDate;
