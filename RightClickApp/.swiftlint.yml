@@ -1,0 +1,6 @@
+disabled_rules:
+  - colon
+  - trailing_newline
+  - trailing_whitespace
+  - leading_whitespace
+line_length: 150
