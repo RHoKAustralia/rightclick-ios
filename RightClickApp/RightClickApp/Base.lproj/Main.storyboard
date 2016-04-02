@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5b6-JY-syL">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +16,151 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="ptY-JF-84M">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightclick_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="USv-Ax-RNE">
+                                <rect key="frame" x="101" y="87" width="398" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="GGi-bZ-4PT"/>
+                                    <constraint firstAttribute="width" constant="398" id="ygm-vK-WUd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8d-eY-F0s">
+                                <rect key="frame" x="146" y="321" width="309" height="68"/>
+                                <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="chu-RP-L4K"/>
+                                    <constraint firstAttribute="height" constant="68" id="hjh-23-CTb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start new lesson">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tZZ-LZ-LbI" kind="show" id="sIc-Uf-qfr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G8d-eY-F0s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="589-xj-KJc"/>
+                            <constraint firstItem="ptY-JF-84M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bb0-Og-OzY"/>
+                            <constraint firstItem="USv-Ax-RNE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FCx-NF-cI9"/>
+                            <constraint firstAttribute="trailing" secondItem="ptY-JF-84M" secondAttribute="trailing" id="M5y-s3-bUr"/>
+                            <constraint firstItem="USv-Ax-RNE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="ME4-kA-RTB"/>
+                            <constraint firstItem="G8d-eY-F0s" firstAttribute="top" secondItem="USv-Ax-RNE" secondAttribute="bottom" constant="8" id="S3z-YK-uwu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ptY-JF-84M" secondAttribute="bottom" id="Vz1-s4-WTp"/>
+                            <constraint firstItem="ptY-JF-84M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZK6-s8-dgd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Ks-Mk-zbM"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1797" y="295"/>
+        </scene>
+        <!--Lesson Detail View Controller-->
+        <scene sceneID="wNH-gi-0hJ">
+            <objects>
+                <viewController id="tZZ-LZ-LbI" customClass="LessonDetailViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGL-O2-dJn"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Q0-Ht-EqY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dZI-lS-66M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lFR-aB-bKM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wld-gy-mdz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="EMz-lt-gGh" kind="show" id="leh-FE-vzl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QJ-Ki-jPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2573" y="305"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="TUX-sZ-sOe">
+            <objects>
+                <viewController id="EMz-lt-gGh" customClass="NoteViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oLb-VI-CAO"/>
+                        <viewControllerLayoutGuide type="bottom" id="nvN-GZ-dzw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r2Q-dO-3PG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gM-ah-iiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3259" y="305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yOP-Hg-h8H">
+            <objects>
+                <viewController id="tzX-wA-uUw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Jk-u3-Aes"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpZ-L7-TbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o44-15-6XD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mkh-cU-IuK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="419"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="w" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XBl-Uk-HIK">
+                                <rect key="frame" x="0.0" y="418" width="600" height="182"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWt-EX-mAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3253" y="982"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="25z-Wg-UZ8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5b6-JY-syL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="iHu-wB-7EM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="veM-R5-NF4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uI7-rl-IVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="header" width="1200" height="675"/>
+        <image name="rightclick_logo_white" width="1500" height="700"/>
+    </resources>
 </document>

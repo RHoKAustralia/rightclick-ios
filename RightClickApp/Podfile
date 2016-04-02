@@ -1,0 +1,16 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+use_frameworks!
+
+target 'RightClickApp' do
+ pod 'Eureka', '~> 1.5'
+end
+
+target 'RightClickAppTests' do
+
+end
+
+target 'RightClickAppUITests' do
+
+end
+

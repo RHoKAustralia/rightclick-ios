@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */; };
+		A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */; };
+		A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46EB69C1CA78E9700FC0C1B /* Localizable.strings */; };
+		A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */; };
+		A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A21CA7AEF400FC0C1B /* Theme.swift */; };
+		A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */; };
+		A46EB6AA1CA7B72700FC0C1B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */; };
 		A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */; };
 		A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDD01C53083F0034CE04 /* ViewController.swift */; };
 		A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD21C53083F0034CE04 /* Main.storyboard */; };
@@ -14,6 +21,7 @@
 		A4C1EDD91C53083F0034CE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD71C53083F0034CE04 /* LaunchScreen.storyboard */; };
 		A4C1EDE41C53083F0034CE04 /* RightClickAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDE31C53083F0034CE04 /* RightClickAppTests.swift */; };
 		A4C1EDEF1C53083F0034CE04 /* RightClickAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDEE1C53083F0034CE04 /* RightClickAppUITests.swift */; };
+		C030A01140C180319518278E /* Pods_RightClickApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648B5E3A55E2B56C09CBC05F /* Pods_RightClickApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15E14E2E81C768CC5DAD05B6 /* Pods-RightClickApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightClickApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RightClickApp/Pods-RightClickApp.debug.xcconfig"; sourceTree = "<group>"; };
+		648B5E3A55E2B56C09CBC05F /* Pods_RightClickApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RightClickApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
+		A46EB69C1CA78E9700FC0C1B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A46EB6A21CA7AEF400FC0C1B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Theme/Theme.swift; sourceTree = "<group>"; };
+		A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lesson.swift; path = Models/Lesson.swift; sourceTree = "<group>"; };
+		A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		A4C1EDCB1C53083F0034CE04 /* RightClickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RightClickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4C1EDD01C53083F0034CE04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,7 @@
 		A4C1EDEA1C53083F0034CE04 /* RightClickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RightClickAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C1EDEE1C53083F0034CE04 /* RightClickAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightClickAppUITests.swift; sourceTree = "<group>"; };
 		A4C1EDF01C53083F0034CE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F36C89C415D86CF39DE1F707 /* Pods-RightClickApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightClickApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RightClickApp/Pods-RightClickApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C030A01140C180319518278E /* Pods_RightClickApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		018DA730840C8D0149BFC26D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				648B5E3A55E2B56C09CBC05F /* Pods_RightClickApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A46EB69E1CA7903700FC0C1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A46EB6A11CA7AEDE00FC0C1B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A46EB6A21CA7AEF400FC0C1B /* Theme.swift */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		A46EB6A61CA7B1D300FC0C1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A4C1EDC21C53083F0034CE04 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +132,8 @@
 				A4C1EDE21C53083F0034CE04 /* RightClickAppTests */,
 				A4C1EDED1C53083F0034CE04 /* RightClickAppUITests */,
 				A4C1EDCC1C53083F0034CE04 /* Products */,
+				F52648D74E3EE82204A6C393 /* Pods */,
+				018DA730840C8D0149BFC26D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +150,19 @@
 		A4C1EDCD1C53083F0034CE04 /* RightClickApp */ = {
 			isa = PBXGroup;
 			children = (
+				A46EB6A61CA7B1D300FC0C1B /* Models */,
+				A46EB6A11CA7AEDE00FC0C1B /* Theme */,
+				A46EB69E1CA7903700FC0C1B /* Extensions */,
 				A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */,
 				A4C1EDD01C53083F0034CE04 /* ViewController.swift */,
+				A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */,
+				A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */,
 				A4C1EDD21C53083F0034CE04 /* Main.storyboard */,
 				A4C1EDD51C53083F0034CE04 /* Assets.xcassets */,
 				A4C1EDD71C53083F0034CE04 /* LaunchScreen.storyboard */,
+				A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */,
 				A4C1EDDA1C53083F0034CE04 /* Info.plist */,
+				A46EB69C1CA78E9700FC0C1B /* Localizable.strings */,
 			);
 			path = RightClickApp;
 			sourceTree = "<group>";
@@ -125,6 +185,15 @@
 			path = RightClickAppUITests;
 			sourceTree = "<group>";
 		};
+		F52648D74E3EE82204A6C393 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15E14E2E81C768CC5DAD05B6 /* Pods-RightClickApp.debug.xcconfig */,
+				F36C89C415D86CF39DE1F707 /* Pods-RightClickApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,10 +201,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4C1EDF31C53083F0034CE04 /* Build configuration list for PBXNativeTarget "RightClickApp" */;
 			buildPhases = (
+				2FF080D90F7AA918DA964D3D /* Check Pods Manifest.lock */,
 				A4C1EDC71C53083F0034CE04 /* Sources */,
 				A4C1EDC81C53083F0034CE04 /* Frameworks */,
 				A4C1EDC91C53083F0034CE04 /* Resources */,
 				A4C1EDFC1C53096B0034CE04 /* ShellScript */,
+				6AB601F3995E4B7DC0931276 /* Embed Pods Frameworks */,
+				D5EB6DD110CD6389199E4A3A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C1EDD91C53083F0034CE04 /* LaunchScreen.storyboard in Resources */,
+				A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */,
 				A4C1EDD61C53083F0034CE04 /* Assets.xcassets in Resources */,
 				A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +326,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2FF080D90F7AA918DA964D3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AB601F3995E4B7DC0931276 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RightClickApp/Pods-RightClickApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A4C1EDFC1C53096B0034CE04 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +369,21 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		D5EB6DD110CD6389199E4A3A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RightClickApp/Pods-RightClickApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,6 +391,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46EB6AA1CA7B72700FC0C1B /* NoteViewController.swift in Sources */,
+				A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */,
+				A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */,
+				A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */,
+				A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */,
+				A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */,
 				A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */,
 				A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */,
 			);
@@ -414,6 +538,7 @@
 		};
 		A4C1EDF41C53083F0034CE04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E14E2E81C768CC5DAD05B6 /* Pods-RightClickApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RightClickApp/Info.plist;
@@ -425,6 +550,7 @@
 		};
 		A4C1EDF51C53083F0034CE04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36C89C415D86CF39DE1F707 /* Pods-RightClickApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RightClickApp/Info.plist;
@@ -501,6 +627,7 @@
 				A4C1EDF51C53083F0034CE04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4C1EDF61C53083F0034CE04 /* Build configuration list for PBXNativeTarget "RightClickAppTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +636,7 @@
 				A4C1EDF81C53083F0034CE04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4C1EDF91C53083F0034CE04 /* Build configuration list for PBXNativeTarget "RightClickAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +645,7 @@
 				A4C1EDFB1C53083F0034CE04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

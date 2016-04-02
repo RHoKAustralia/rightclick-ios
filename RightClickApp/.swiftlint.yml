@@ -4,3 +4,5 @@ disabled_rules:
   - trailing_whitespace
   - leading_whitespace
 line_length: 150
+excluded:
+  - Pods

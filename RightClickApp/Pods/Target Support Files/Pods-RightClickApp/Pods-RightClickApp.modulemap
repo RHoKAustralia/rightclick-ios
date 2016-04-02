@@ -1,0 +1,6 @@
+framework module Pods_RightClickApp {
+  umbrella header "Pods-RightClickApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

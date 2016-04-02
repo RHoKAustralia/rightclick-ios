@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  RightClickApp
+
+  Created by Janidu Wanigasuriya on 27/03/2016.
+  Copyright © 2016 Right Click. All rights reserved.
+*/
+"lesson-detail.form.title" = "Start new lesson";
+"lesson-detail.form.section.lesson" = "Lesson details";
+"lesson-detail.form.section.student" = "Student details";
+"lesson-detail.form.lessonTitle" = "Lesson title";
+"lesson-detail.form.tutorName" = "Tutor name";
+"lesson-detail.form.studentName" = "Student name";
+"lesson-detail.form.studentEmail" = "Student email";
+"lesson-detail.form.deviceType" = "Device type";
+"lesson-detail.form.deviceTypeOther" = "Other device type";
+"lesson-detail.form.deviceType.mobile" = "Mobile";
+"lesson-detail.form.deviceType.tablet" = "Tablet";
+"lesson-detail.form.deviceType.laptop" = "Laptop";
+"lesson-detail.form.deviceType.camera" = "Camera";
+"lesson-detail.form.deviceType.other" = "Other";
+"lesson-detail.form.validation" = "Please enter the";
+"lesson-detail.form.placeholder.required" = "Required";
+"lesson-detail.form.placeholder.optional" = "Optional";
+
+"alert.ok" = "Ok";
+"alert.error.title" = "Error";

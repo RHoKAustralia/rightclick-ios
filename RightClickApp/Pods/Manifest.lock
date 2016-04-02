@@ -1,0 +1,10 @@
+PODS:
+  - Eureka (1.5.0)
+
+DEPENDENCIES:
+  - Eureka (~> 1.5)
+
+SPEC CHECKSUMS:
+  Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
+
+COCOAPODS: 0.39.0
