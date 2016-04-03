@@ -5,6 +5,8 @@
   Created by Janidu Wanigasuriya on 27/03/2016.
   Copyright © 2016 Right Click. All rights reserved.
 */
+
+// Lesson Details
 "lesson-detail.form.title" = "Start new lesson";
 "lesson-detail.form.section.lesson" = "Lesson details";
 "lesson-detail.form.section.student" = "Student details";
@@ -22,6 +24,15 @@
 "lesson-detail.form.validation" = "Please enter the";
 "lesson-detail.form.placeholder.required" = "Required";
 "lesson-detail.form.placeholder.optional" = "Optional";
+
+// Notes
+"notes.form.title" = "Notes";
+
+// New Note
+"new-note.form.title" = "New note";
+"new-note.form.section.note" = "Note details";
+"new-note.form.noteText" = "Note text";
+"new-note.form.noteImage" = "Note Image";
 
 "alert.ok" = "Ok";
 "alert.error.title" = "Error";

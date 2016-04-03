@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import Eureka
 
-class NewNoteViewController: UIViewController {
+class NewNoteViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        title = "new-note.form.title".localized
+        
+        addNoteForm()
     }
     
+    func addNoteForm() {
+        let section = Section("new-note.form.section.note".localized)
+        
+        section.append(TextRow("Note Text") {
+            $0.title = "new-note.form.noteText".localized })
+        
+        section.append(ButtonRow("Button Row") {
+            $0.title = "new-note.form.noteImage".localized
+            $0.presentationMode = .SegueName(segueName: "NewNoteImageSegue", completionCallback: nil)})
+        
+        form.append(section)
+    }
 
     /*
     // MARK: - Navigation

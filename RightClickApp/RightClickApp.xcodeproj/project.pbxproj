@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */; };
+		A403269E1CAFE0ED0084AB09 /* NewNoteImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */; };
 		A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */; };
 		A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46EB69C1CA78E9700FC0C1B /* Localizable.strings */; };
 		A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */; };
 		A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A21CA7AEF400FC0C1B /* Theme.swift */; };
 		A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */; };
-		A46EB6AA1CA7B72700FC0C1B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */; };
+		A46EB6AA1CA7B72700FC0C1B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */; };
 		A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */; };
 		A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDD01C53083F0034CE04 /* ViewController.swift */; };
 		A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD21C53083F0034CE04 /* Main.storyboard */; };
@@ -45,12 +46,13 @@
 		15E14E2E81C768CC5DAD05B6 /* Pods-RightClickApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightClickApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RightClickApp/Pods-RightClickApp.debug.xcconfig"; sourceTree = "<group>"; };
 		648B5E3A55E2B56C09CBC05F /* Pods_RightClickApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RightClickApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteImageViewController.swift; sourceTree = "<group>"; };
 		A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		A46EB69C1CA78E9700FC0C1B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A46EB6A21CA7AEF400FC0C1B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Theme/Theme.swift; sourceTree = "<group>"; };
 		A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lesson.swift; path = Models/Lesson.swift; sourceTree = "<group>"; };
-		A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		A4C1EDCB1C53083F0034CE04 /* RightClickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RightClickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4C1EDD01C53083F0034CE04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,11 +158,12 @@
 				A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */,
 				A4C1EDD01C53083F0034CE04 /* ViewController.swift */,
 				A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */,
-				A46EB6A91CA7B72700FC0C1B /* NoteViewController.swift */,
+				A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */,
+				A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */,
+				A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */,
 				A4C1EDD21C53083F0034CE04 /* Main.storyboard */,
 				A4C1EDD51C53083F0034CE04 /* Assets.xcassets */,
 				A4C1EDD71C53083F0034CE04 /* LaunchScreen.storyboard */,
-				A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */,
 				A4C1EDDA1C53083F0034CE04 /* Info.plist */,
 				A46EB69C1CA78E9700FC0C1B /* Localizable.strings */,
 			);
@@ -391,8 +394,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46EB6AA1CA7B72700FC0C1B /* NoteViewController.swift in Sources */,
+				A46EB6AA1CA7B72700FC0C1B /* NotesViewController.swift in Sources */,
 				A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */,
+				A403269E1CAFE0ED0084AB09 /* NewNoteImageViewController.swift in Sources */,
 				A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */,
 				A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */,
 				A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */,

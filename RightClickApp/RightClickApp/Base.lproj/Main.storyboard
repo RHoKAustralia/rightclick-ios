@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="2573" y="305"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Notes-->
         <scene sceneID="TUX-sZ-sOe">
             <objects>
-                <viewController id="EMz-lt-gGh" customClass="NoteViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notes" id="EMz-lt-gGh" customClass="NotesViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oLb-VI-CAO"/>
                         <viewControllerLayoutGuide type="bottom" id="nvN-GZ-dzw"/>
@@ -101,15 +101,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7Fo-un-me2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="f5o-NU-T1c">
+                            <connections>
+                                <segue destination="tzX-wA-uUw" kind="show" id="8NV-ln-G8U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gM-ah-iiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3259" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--New Note-->
         <scene sceneID="yOP-Hg-h8H">
             <objects>
-                <viewController id="tzX-wA-uUw" sceneMemberID="viewController">
+                <viewController title="New Note" id="tzX-wA-uUw" customClass="NewNoteViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Jk-u3-Aes"/>
                         <viewControllerLayoutGuide type="bottom" id="dpZ-L7-TbY"/>
@@ -117,23 +125,53 @@
                     <view key="view" contentMode="scaleToFill" id="o44-15-6XD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mkh-cU-IuK">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="419"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="w" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XBl-Uk-HIK">
-                                <rect key="frame" x="0.0" y="418" width="600" height="182"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="zAE-IT-0eP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZWF-FK-vjI"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="uPP-oG-9Sj" kind="push" identifier="NewNoteImageSegue" id="PFJ-zz-QVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWt-EX-mAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3253" y="982"/>
+            <point key="canvasLocation" x="3939" y="305"/>
+        </scene>
+        <!--New Note Image View Controller-->
+        <scene sceneID="uL2-6e-7P9">
+            <objects>
+                <viewController id="uPP-oG-9Sj" customClass="NewNoteImageViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lcd-vq-zC4"/>
+                        <viewControllerLayoutGuide type="bottom" id="n5W-9k-aJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dCR-mz-VOA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1XO-BJ-SIv">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1XO-BJ-SIv" firstAttribute="leading" secondItem="dCR-mz-VOA" secondAttribute="leading" id="4ZF-Za-l7n"/>
+                            <constraint firstAttribute="trailing" secondItem="1XO-BJ-SIv" secondAttribute="trailing" id="Ah6-aa-iKy"/>
+                            <constraint firstItem="1XO-BJ-SIv" firstAttribute="top" secondItem="Lcd-vq-zC4" secondAttribute="bottom" id="L2t-gK-Iwh"/>
+                            <constraint firstItem="n5W-9k-aJS" firstAttribute="top" secondItem="1XO-BJ-SIv" secondAttribute="bottom" id="zoS-uc-4se"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NzW-aT-Xxp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="W2H-Eh-0V0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteImageView" destination="1XO-BJ-SIv" id="2vE-Yz-zac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xak-yA-DA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4723" y="300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="25z-Wg-UZ8">
