@@ -138,6 +138,39 @@
             </objects>
             <point key="canvasLocation" x="3939" y="305"/>
         </scene>
+        <!--Annotation View Controller-->
+        <scene sceneID="Ntk-lt-lgc">
+            <objects>
+                <viewController storyboardIdentifier="AnnotationViewController" id="98g-5E-xnz" customClass="AnnotationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MkK-n7-os5"/>
+                        <viewControllerLayoutGuide type="bottom" id="AZl-6W-g5T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AAR-xd-6C3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5b-xg-inX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O5b-xg-inX" firstAttribute="leading" secondItem="AAR-xd-6C3" secondAttribute="leading" id="8hW-t9-ck8"/>
+                            <constraint firstAttribute="trailing" secondItem="O5b-xg-inX" secondAttribute="trailing" id="WG7-UU-PQH"/>
+                            <constraint firstItem="O5b-xg-inX" firstAttribute="top" secondItem="AAR-xd-6C3" secondAttribute="top" id="oTq-lb-zcg"/>
+                            <constraint firstItem="AZl-6W-g5T" firstAttribute="top" secondItem="O5b-xg-inX" secondAttribute="bottom" id="tCi-07-ytw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="O5b-xg-inX" id="9PR-Fe-eE8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9y9-Kq-soB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4723" y="970"/>
+        </scene>
         <!--New Note Image View Controller-->
         <scene sceneID="uL2-6e-7P9">
             <objects>
@@ -150,28 +183,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1XO-BJ-SIv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xX-cD-6FI">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1XO-BJ-SIv" firstAttribute="leading" secondItem="dCR-mz-VOA" secondAttribute="leading" id="4ZF-Za-l7n"/>
-                            <constraint firstAttribute="trailing" secondItem="1XO-BJ-SIv" secondAttribute="trailing" id="Ah6-aa-iKy"/>
-                            <constraint firstItem="1XO-BJ-SIv" firstAttribute="top" secondItem="Lcd-vq-zC4" secondAttribute="bottom" id="L2t-gK-Iwh"/>
-                            <constraint firstItem="n5W-9k-aJS" firstAttribute="top" secondItem="1XO-BJ-SIv" secondAttribute="bottom" id="zoS-uc-4se"/>
+                            <constraint firstItem="8xX-cD-6FI" firstAttribute="leading" secondItem="dCR-mz-VOA" secondAttribute="leading" id="V6F-QX-2D6"/>
+                            <constraint firstAttribute="trailing" secondItem="8xX-cD-6FI" secondAttribute="trailing" id="XTk-j6-4da"/>
+                            <constraint firstItem="8xX-cD-6FI" firstAttribute="top" secondItem="Lcd-vq-zC4" secondAttribute="bottom" id="qBM-Dd-2ey"/>
+                            <constraint firstItem="n5W-9k-aJS" firstAttribute="top" secondItem="8xX-cD-6FI" secondAttribute="bottom" id="zWh-5x-7zV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NzW-aT-Xxp">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="W2H-Eh-0V0"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="noteImageView" destination="1XO-BJ-SIv" id="2vE-Yz-zac"/>
+                        <outlet property="noteImageView" destination="8xX-cD-6FI" id="zNE-mr-6K4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xak-yA-DA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4723" y="300"/>
+            <point key="canvasLocation" x="4707" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="25z-Wg-UZ8">

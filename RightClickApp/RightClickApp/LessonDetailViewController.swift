@@ -95,11 +95,9 @@ class LessonDetailViewController: FormViewController {
         let studentName = formValues["StudentName"] as? String ?? ""
         let studentEmail = formValues["StudentEmail"] as? String
         
-        let lesson = Lesson(title: lessonTitle, tutorName: tutorName, deviceType: deviceType,
-                            studentName: studentName, studentEmail: studentEmail)
-        
-        print("Lesson \(lesson)")
-        
+        let lesson = DataService.sharedInstance.createLesson(lessonTitle, tutorName: tutorName, deviceType: deviceType,
+                                                studentName: studentName, studentEmail: studentEmail)
+    
         return lesson
     }
     

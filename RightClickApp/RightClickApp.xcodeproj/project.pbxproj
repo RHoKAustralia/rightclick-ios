@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */; };
 		A403269E1CAFE0ED0084AB09 /* NewNoteImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */; };
+		A40621921CC3674100BF73D0 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A40621911CC3645900BF73D0 /* fontawesome-webfont.ttf */; };
+		A40621941CC36BD000BF73D0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621931CC36BD000BF73D0 /* Note.swift */; };
+		A40621971CC36D5100BF73D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621961CC36D5100BF73D0 /* DataService.swift */; };
+		A40621991CC3799E00BF73D0 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621981CC3799E00BF73D0 /* ImageUtils.swift */; };
 		A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */; };
 		A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46EB69C1CA78E9700FC0C1B /* Localizable.strings */; };
-		A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */; };
 		A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A21CA7AEF400FC0C1B /* Theme.swift */; };
 		A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */; };
 		A46EB6AA1CA7B72700FC0C1B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */; };
+		A4A508FB1CB0A8E60023D7C2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A508FA1CB0A8E60023D7C2 /* StringExtensions.swift */; };
+		A4A508FF1CB0AD8E0023D7C2 /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A508FE1CB0AD8E0023D7C2 /* AnnotationViewController.m */; };
 		A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */; };
 		A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDD01C53083F0034CE04 /* ViewController.swift */; };
 		A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD21C53083F0034CE04 /* Main.storyboard */; };
@@ -47,12 +52,19 @@
 		648B5E3A55E2B56C09CBC05F /* Pods_RightClickApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RightClickApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteImageViewController.swift; sourceTree = "<group>"; };
+		A40621911CC3645900BF73D0 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "Resources/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		A40621931CC36BD000BF73D0 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		A40621961CC36D5100BF73D0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = Service/DataService.swift; sourceTree = "<group>"; };
+		A40621981CC3799E00BF73D0 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Service/ImageUtils.swift; sourceTree = "<group>"; };
 		A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		A46EB69C1CA78E9700FC0C1B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A46EB6A21CA7AEF400FC0C1B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Theme/Theme.swift; sourceTree = "<group>"; };
 		A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lesson.swift; path = Models/Lesson.swift; sourceTree = "<group>"; };
 		A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		A4A508FA1CB0A8E60023D7C2 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Extensions/StringExtensions.swift; sourceTree = "<group>"; };
+		A4A508FC1CB0AD8D0023D7C2 /* RightClickApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RightClickApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		A4A508FD1CB0AD8E0023D7C2 /* AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationViewController.h; sourceTree = "<group>"; };
+		A4A508FE1CB0AD8E0023D7C2 /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
 		A4C1EDCB1C53083F0034CE04 /* RightClickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RightClickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4C1EDD01C53083F0034CE04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,10 +115,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A40621951CC36D2400BF73D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A40621961CC36D5100BF73D0 /* DataService.swift */,
+				A40621981CC3799E00BF73D0 /* ImageUtils.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		A46EB69E1CA7903700FC0C1B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A46EB69F1CA7905700FC0C1B /* StringExtensions.swift */,
+				A4A508FA1CB0A8E60023D7C2 /* StringExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A46EB6A71CA7B1F800FC0C1B /* Lesson.swift */,
+				A40621931CC36BD000BF73D0 /* Note.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -152,6 +174,7 @@
 		A4C1EDCD1C53083F0034CE04 /* RightClickApp */ = {
 			isa = PBXGroup;
 			children = (
+				A40621951CC36D2400BF73D0 /* Service */,
 				A46EB6A61CA7B1D300FC0C1B /* Models */,
 				A46EB6A11CA7AEDE00FC0C1B /* Theme */,
 				A46EB69E1CA7903700FC0C1B /* Extensions */,
@@ -161,11 +184,15 @@
 				A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */,
 				A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */,
 				A403269D1CAFE0ED0084AB09 /* NewNoteImageViewController.swift */,
+				A4A508FD1CB0AD8E0023D7C2 /* AnnotationViewController.h */,
+				A4A508FE1CB0AD8E0023D7C2 /* AnnotationViewController.m */,
 				A4C1EDD21C53083F0034CE04 /* Main.storyboard */,
+				A40621911CC3645900BF73D0 /* fontawesome-webfont.ttf */,
 				A4C1EDD51C53083F0034CE04 /* Assets.xcassets */,
 				A4C1EDD71C53083F0034CE04 /* LaunchScreen.storyboard */,
 				A4C1EDDA1C53083F0034CE04 /* Info.plist */,
 				A46EB69C1CA78E9700FC0C1B /* Localizable.strings */,
+				A4A508FC1CB0AD8D0023D7C2 /* RightClickApp-Bridging-Header.h */,
 			);
 			path = RightClickApp;
 			sourceTree = "<group>";
@@ -263,12 +290,13 @@
 		A4C1EDC31C53083F0034CE04 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Right Click";
 				TargetAttributes = {
 					A4C1EDCA1C53083F0034CE04 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5AXRG4S9YB;
 					};
 					A4C1EDDE1C53083F0034CE04 = {
 						CreatedOnToolsVersion = 7.2;
@@ -307,6 +335,7 @@
 			files = (
 				A4C1EDD91C53083F0034CE04 /* LaunchScreen.storyboard in Resources */,
 				A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */,
+				A40621921CC3674100BF73D0 /* fontawesome-webfont.ttf in Resources */,
 				A4C1EDD61C53083F0034CE04 /* Assets.xcassets in Resources */,
 				A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */,
 			);
@@ -395,12 +424,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46EB6AA1CA7B72700FC0C1B /* NotesViewController.swift in Sources */,
-				A46EB6A01CA7905700FC0C1B /* StringExtensions.swift in Sources */,
 				A403269E1CAFE0ED0084AB09 /* NewNoteImageViewController.swift in Sources */,
 				A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */,
+				A40621971CC36D5100BF73D0 /* DataService.swift in Sources */,
+				A4A508FB1CB0A8E60023D7C2 /* StringExtensions.swift in Sources */,
+				A40621991CC3799E00BF73D0 /* ImageUtils.swift in Sources */,
 				A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */,
 				A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */,
 				A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */,
+				A40621941CC36BD000BF73D0 /* Note.swift in Sources */,
+				A4A508FF1CB0AD8E0023D7C2 /* AnnotationViewController.m in Sources */,
 				A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */,
 				A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */,
 			);
@@ -545,10 +578,14 @@
 			baseConfigurationReference = 15E14E2E81C768CC5DAD05B6 /* Pods-RightClickApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RightClickApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.rightclick.RightClickApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RightClickApp/RightClickApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -557,10 +594,13 @@
 			baseConfigurationReference = F36C89C415D86CF39DE1F707 /* Pods-RightClickApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RightClickApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.rightclick.RightClickApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RightClickApp/RightClickApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

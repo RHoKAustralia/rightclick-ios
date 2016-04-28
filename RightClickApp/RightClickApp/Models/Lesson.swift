@@ -14,4 +14,5 @@ struct Lesson {
     var deviceType: String
     var studentName: String
     var studentEmail: String?
+    var notes: [Note]
 }

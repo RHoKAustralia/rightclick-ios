@@ -41,11 +41,27 @@ extension NewNoteImageViewController: UIImagePickerControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             noteImageView.image = chosenImage
+            
+            // Annotate the image
+            let annotationViewController = storyboard?.instantiateViewControllerWithIdentifier(
+                "AnnotationViewController") as? AnnotationViewController
+            annotationViewController?.imageToAnnotate = chosenImage
+            annotationViewController?.delegate = self
+            navigationController?.pushViewController(annotationViewController!, animated: true)
         }
+        
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension NewNoteImageViewController: AnnotationViewControllerDelegate {
+    
+    func didAnnotateImage(annotatedImage: UIImage) {
+        ImageUtils.saveImage(annotatedImage)
+        self.noteImageView.image = annotatedImage
     }
 }
