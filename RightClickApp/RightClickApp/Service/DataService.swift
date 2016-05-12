@@ -11,7 +11,6 @@ import Foundation
 class DataService {
     
     static let sharedInstance = DataService()
-    
     private var lesson: Lesson?
     
     func createLesson(title: String, tutorName: String, deviceType: String,
@@ -21,6 +20,11 @@ class DataService {
                         studentName: studentName, studentEmail: studentEmail, notes: [Note]())
         
         return lesson!
-        
+    }
+    
+    func createNote(noteText: String, noteImagePath: String) -> Note {
+        let note = Note(noteText: noteText, noteImage: nil, noteImagePath: noteImagePath)
+        lesson?.notes.append(note)
+        return note
     }
 }

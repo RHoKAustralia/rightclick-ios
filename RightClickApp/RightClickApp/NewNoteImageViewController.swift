@@ -9,10 +9,15 @@
 import UIKit
 import Eureka
 
+protocol NewNoteImageViewControllerDelegate: NSObjectProtocol {
+    func didAddImage(imagePath: String)
+    func didDismissImagePicker()
+}
+
 class NewNoteImageViewController: UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var noteImageView: UIImageView!
     var imagePicker: UIImagePickerController!
+    weak var delegate: NewNoteImageViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,25 +28,12 @@ class NewNoteImageViewController: UIViewController, UINavigationControllerDelega
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 extension NewNoteImageViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            noteImageView.image = chosenImage
-            
             // Annotate the image
             let annotationViewController = storyboard?.instantiateViewControllerWithIdentifier(
                 "AnnotationViewController") as? AnnotationViewController
@@ -55,13 +47,14 @@ extension NewNoteImageViewController: UIImagePickerControllerDelegate {
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.didDismissImagePicker()
+        navigationController?.popViewControllerAnimated(true)
     }
 }
 
 extension NewNoteImageViewController: AnnotationViewControllerDelegate {
-    
     func didAnnotateImage(annotatedImage: UIImage) {
-        ImageUtils.saveImage(annotatedImage)
-        self.noteImageView.image = annotatedImage
+        delegate?.didAddImage(ImageUtils.saveImage(annotatedImage))
+        navigationController?.popViewControllerAnimated(true)
     }
 }

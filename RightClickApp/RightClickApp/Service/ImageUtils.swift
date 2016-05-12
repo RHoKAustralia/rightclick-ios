@@ -24,12 +24,12 @@ import Foundation
         return scaledImage
     }
     
-    class func saveImage(image: UIImage) -> Bool {
+    class func saveImage(image: UIImage) -> String {
         let filePath =  fileInDocumentsDirectory(getFileName())
         let pngImageData = UIImagePNGRepresentation(image)
         let result = pngImageData!.writeToFile(filePath, atomically: true)
         print("Saved file at path \(filePath) \(result)")
-        return result
+        return filePath
     }
     
     class func fileInDocumentsDirectory(filename: String) -> String {

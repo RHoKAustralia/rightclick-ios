@@ -33,6 +33,7 @@
 "new-note.form.section.note" = "Note details";
 "new-note.form.noteText" = "Note text";
 "new-note.form.noteImage" = "Note Image";
+"new-note.form.removeImage" = "Remove Image";
 
 "alert.ok" = "Ok";
 "alert.error.title" = "Error";
