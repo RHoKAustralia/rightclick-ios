@@ -32,8 +32,9 @@
 "new-note.form.title" = "New note";
 "new-note.form.section.note" = "Note details";
 "new-note.form.noteText" = "Note text";
-"new-note.form.noteImage" = "Note Image";
+"new-note.form.noteImage" = "Note image";
 "new-note.form.removeImage" = "Remove Image";
+"new-note.form.validation" = "Please enter the note text or add an image";
 
 "alert.ok" = "Ok";
 "alert.error.title" = "Error";

@@ -18,7 +18,6 @@ class NewNoteViewController: FormViewController {
     var removeNoteImageRow: ButtonRow!
     var noteImagePath = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +28,31 @@ class NewNoteViewController: FormViewController {
     
     @IBAction func saveNote(sender: AnyObject) {
         let formValues = form.values(includeHidden: true)
-        // Save Note
         let noteText = formValues["Note Text"] as? String ?? ""
-        DataService.sharedInstance.createNote(noteText, noteImagePath: noteImagePath)
-        navigationController?.popViewControllerAnimated(true)
+        
+        if valid(noteText, noteImagePath: noteImagePath) {
+            // Save Note
+            DataService.sharedInstance.createNote(noteText, noteImagePath: noteImagePath)
+            navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    func valid(noteText: String, noteImagePath: String) -> Bool {
+        var valid = true
+        
+        if noteText.isEmpty && noteImagePath.isEmpty {
+            let validationMessage = "\("new-note.form.validation".localized)"
+            let validationAlert = UIAlertController(title: "alert.error.title".localized,
+                                                    message: validationMessage, preferredStyle: .Alert)
+            validationAlert.addAction(UIAlertAction(title: "alert.ok".localized,
+                style: .Default, handler: nil))
+            
+            presentViewController(validationAlert, animated: true, completion: nil)
+            
+            valid = false
+        }
+        
+        return valid
     }
     
     override func viewWillAppear(animated: Bool) {

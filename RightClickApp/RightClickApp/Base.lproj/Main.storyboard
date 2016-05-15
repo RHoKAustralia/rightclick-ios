@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Lesson View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartLessonViewController" customModule="RightClickApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" title="Title" id="7Fo-un-me2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f5o-NU-T1c">
                             <connections>
-                                <segue destination="tzX-wA-uUw" kind="show" id="8NV-ln-G8U"/>
+                                <segue destination="tzX-wA-uUw" kind="showDetail" action="showViewController:sender:" id="8NV-ln-G8U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,6 +128,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zAE-IT-0eP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JLi-v9-23b">
+                            <connections>
+                                <segue destination="ceu-AW-MAi" kind="unwind" unwindAction="prepareForUnwind:" id="QWJ-rQ-9tf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZWF-FK-vjI">
                             <connections>
                                 <action selector="saveNote:" destination="tzX-wA-uUw" id="tAz-Wp-Fl7"/>
@@ -139,6 +144,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWt-EX-mAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ceu-AW-MAi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3939" y="305"/>
         </scene>
@@ -156,7 +162,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5b-xg-inX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

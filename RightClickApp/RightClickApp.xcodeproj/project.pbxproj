@@ -21,7 +21,7 @@
 		A4A508FB1CB0A8E60023D7C2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A508FA1CB0A8E60023D7C2 /* StringExtensions.swift */; };
 		A4A508FF1CB0AD8E0023D7C2 /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A508FE1CB0AD8E0023D7C2 /* AnnotationViewController.m */; };
 		A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */; };
-		A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDD01C53083F0034CE04 /* ViewController.swift */; };
+		A4C1EDD11C53083F0034CE04 /* StartLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1EDD01C53083F0034CE04 /* StartLessonViewController.swift */; };
 		A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD21C53083F0034CE04 /* Main.storyboard */; };
 		A4C1EDD61C53083F0034CE04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD51C53083F0034CE04 /* Assets.xcassets */; };
 		A4C1EDD91C53083F0034CE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C1EDD71C53083F0034CE04 /* LaunchScreen.storyboard */; };
@@ -67,7 +67,7 @@
 		A4A508FE1CB0AD8E0023D7C2 /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
 		A4C1EDCB1C53083F0034CE04 /* RightClickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RightClickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4C1EDD01C53083F0034CE04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4C1EDD01C53083F0034CE04 /* StartLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLessonViewController.swift; sourceTree = "<group>"; };
 		A4C1EDD31C53083F0034CE04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4C1EDD51C53083F0034CE04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4C1EDD81C53083F0034CE04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				A46EB6A11CA7AEDE00FC0C1B /* Theme */,
 				A46EB69E1CA7903700FC0C1B /* Extensions */,
 				A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */,
-				A4C1EDD01C53083F0034CE04 /* ViewController.swift */,
+				A4C1EDD01C53083F0034CE04 /* StartLessonViewController.swift */,
 				A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */,
 				A46EB6A91CA7B72700FC0C1B /* NotesViewController.swift */,
 				A403269B1CAFC4270084AB09 /* NewNoteViewController.swift */,
@@ -434,7 +434,7 @@
 				A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */,
 				A40621941CC36BD000BF73D0 /* Note.swift in Sources */,
 				A4A508FF1CB0AD8E0023D7C2 /* AnnotationViewController.m in Sources */,
-				A4C1EDD11C53083F0034CE04 /* ViewController.swift in Sources */,
+				A4C1EDD11C53083F0034CE04 /* StartLessonViewController.swift in Sources */,
 				A4C1EDCF1C53083F0034CE04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

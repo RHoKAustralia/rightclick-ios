@@ -11,7 +11,7 @@ import Foundation
 class DataService {
     
     static let sharedInstance = DataService()
-    private var lesson: Lesson?
+    var lesson: Lesson?
     
     func createLesson(title: String, tutorName: String, deviceType: String,
                       studentName: String, studentEmail: String?) -> Lesson {
