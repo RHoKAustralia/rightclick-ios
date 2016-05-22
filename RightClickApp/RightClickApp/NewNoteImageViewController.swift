@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 
 protocol NewNoteImageViewControllerDelegate: NSObjectProtocol {
-    func didAddImage(imagePath: String)
+    func didAddImage(fileName: String)
     func didDismissImagePicker()
 }
 

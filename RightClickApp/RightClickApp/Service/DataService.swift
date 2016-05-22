@@ -22,8 +22,8 @@ class DataService {
         return lesson!
     }
     
-    func createNote(noteText: String, noteImagePath: String) -> Note {
-        let note = Note(noteText: noteText, noteImage: nil, noteImagePath: noteImagePath)
+    func createNote(noteText: String, noteImageName: String) -> Note {
+        let note = Note(noteText: noteText, noteImageName: noteImageName)
         lesson?.notes.append(note)
         return note
     }

@@ -25,11 +25,12 @@ import Foundation
     }
     
     class func saveImage(image: UIImage) -> String {
-        let filePath =  fileInDocumentsDirectory(getFileName())
+        let fileName = getFileName()
+        let filePath =  fileInDocumentsDirectory(fileName)
         let pngImageData = UIImagePNGRepresentation(image)
         let result = pngImageData!.writeToFile(filePath, atomically: true)
         print("Saved file at path \(filePath) \(result)")
-        return filePath
+        return fileName
     }
     
     class func fileInDocumentsDirectory(filename: String) -> String {
@@ -42,5 +43,13 @@ import Foundation
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return "\(dateFormatter.stringFromDate(NSDate())).png"
+    }
+    
+    class func imageWithPath(imageName: String) -> UIImage? {
+        var imagePath = "placeholder-note"
+        if imageName != "" {
+            imagePath = ImageUtils.fileInDocumentsDirectory(imageName)
+        }
+        return UIImage(named: imagePath)
     }
 }

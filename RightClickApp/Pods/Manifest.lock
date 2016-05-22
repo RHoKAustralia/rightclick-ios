@@ -1,11 +1,13 @@
 PODS:
   - Eureka (1.5.0)
+  - FMMosaicLayout (0.1.4)
   - jot (0.1.5):
     - Masonry (~> 0.6.1)
   - Masonry (0.6.4)
 
 DEPENDENCIES:
   - Eureka (~> 1.5)
+  - FMMosaicLayout
   - jot (from `https://github.com/janiduw/jot.git`)
 
 EXTERNAL SOURCES:
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
+  FMMosaicLayout: c0febf6876c987c425d7e2176d034fa7a2c98cb5
   jot: 0f5dc333defa6ad805d01adc3834b201c22510a7
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
 

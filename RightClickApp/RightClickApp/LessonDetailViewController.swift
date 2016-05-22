@@ -119,16 +119,16 @@ class LessonDetailViewController: FormViewController {
             valid = false
         }
         
-        if !valid {
+        /*if !valid {
             let validationAlert = UIAlertController(title: "alert.error.title".localized,
                                                     message: validationMessage, preferredStyle: .Alert)
             validationAlert.addAction(UIAlertAction(title: "alert.ok".localized,
                 style: .Default, handler: nil))
             
             presentViewController(validationAlert, animated: true, completion: nil)
-        }
+        }*/
         
-        return valid
+        return true
     }
     
     

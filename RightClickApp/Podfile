@@ -5,6 +5,7 @@ use_frameworks!
 target 'RightClickApp' do
  pod 'Eureka', '~> 1.5'
  pod "jot", :git => 'https://github.com/janiduw/jot.git'
+ pod "FMMosaicLayout"
 end
 
 target 'RightClickAppTests' do

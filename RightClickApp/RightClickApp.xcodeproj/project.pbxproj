@@ -13,6 +13,11 @@
 		A40621941CC36BD000BF73D0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621931CC36BD000BF73D0 /* Note.swift */; };
 		A40621971CC36D5100BF73D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621961CC36D5100BF73D0 /* DataService.swift */; };
 		A40621991CC3799E00BF73D0 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40621981CC3799E00BF73D0 /* ImageUtils.swift */; };
+		A42734D91CF196EB00C482E8 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42734D81CF196EB00C482E8 /* NoteCollectionViewCell.swift */; };
+		A42734DB1CF19CB200C482E8 /* NoteCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42734DA1CF19CB200C482E8 /* NoteCollectionViewHeader.swift */; };
+		A42734DD1CF19CBB00C482E8 /* NoteCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42734DC1CF19CBB00C482E8 /* NoteCollectionViewFooter.swift */; };
+		A42734E01CF19DA800C482E8 /* NoteCollectionViewFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42734DE1CF19DA800C482E8 /* NoteCollectionViewFooterView.xib */; };
+		A42734E11CF19DA800C482E8 /* NoteCollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42734DF1CF19DA800C482E8 /* NoteCollectionViewHeaderView.xib */; };
 		A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */; };
 		A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46EB69C1CA78E9700FC0C1B /* Localizable.strings */; };
 		A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46EB6A21CA7AEF400FC0C1B /* Theme.swift */; };
@@ -56,6 +61,11 @@
 		A40621931CC36BD000BF73D0 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A40621961CC36D5100BF73D0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = Service/DataService.swift; sourceTree = "<group>"; };
 		A40621981CC3799E00BF73D0 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Service/ImageUtils.swift; sourceTree = "<group>"; };
+		A42734D81CF196EB00C482E8 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		A42734DA1CF19CB200C482E8 /* NoteCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewHeader.swift; sourceTree = "<group>"; };
+		A42734DC1CF19CBB00C482E8 /* NoteCollectionViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewFooter.swift; sourceTree = "<group>"; };
+		A42734DE1CF19DA800C482E8 /* NoteCollectionViewFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCollectionViewFooterView.xib; sourceTree = "<group>"; };
+		A42734DF1CF19DA800C482E8 /* NoteCollectionViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		A46EB69A1CA7872200FC0C1B /* LessonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		A46EB69C1CA78E9700FC0C1B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A46EB6A21CA7AEF400FC0C1B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Theme/Theme.swift; sourceTree = "<group>"; };
@@ -149,6 +159,18 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		A474DE261CE89E7C007E7538 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A42734DE1CF19DA800C482E8 /* NoteCollectionViewFooterView.xib */,
+				A42734DF1CF19DA800C482E8 /* NoteCollectionViewHeaderView.xib */,
+				A42734D81CF196EB00C482E8 /* NoteCollectionViewCell.swift */,
+				A42734DA1CF19CB200C482E8 /* NoteCollectionViewHeader.swift */,
+				A42734DC1CF19CBB00C482E8 /* NoteCollectionViewFooter.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A4C1EDC21C53083F0034CE04 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +199,7 @@
 				A40621951CC36D2400BF73D0 /* Service */,
 				A46EB6A61CA7B1D300FC0C1B /* Models */,
 				A46EB6A11CA7AEDE00FC0C1B /* Theme */,
+				A474DE261CE89E7C007E7538 /* Cells */,
 				A46EB69E1CA7903700FC0C1B /* Extensions */,
 				A4C1EDCE1C53083F0034CE04 /* AppDelegate.swift */,
 				A4C1EDD01C53083F0034CE04 /* StartLessonViewController.swift */,
@@ -333,11 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42734E11CF19DA800C482E8 /* NoteCollectionViewHeaderView.xib in Resources */,
 				A4C1EDD91C53083F0034CE04 /* LaunchScreen.storyboard in Resources */,
 				A46EB69D1CA78E9700FC0C1B /* Localizable.strings in Resources */,
 				A40621921CC3674100BF73D0 /* fontawesome-webfont.ttf in Resources */,
 				A4C1EDD61C53083F0034CE04 /* Assets.xcassets in Resources */,
 				A4C1EDD41C53083F0034CE04 /* Main.storyboard in Resources */,
+				A42734E01CF19DA800C482E8 /* NoteCollectionViewFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +453,10 @@
 				A46EB69B1CA7872200FC0C1B /* LessonDetailViewController.swift in Sources */,
 				A40621971CC36D5100BF73D0 /* DataService.swift in Sources */,
 				A4A508FB1CB0A8E60023D7C2 /* StringExtensions.swift in Sources */,
+				A42734DD1CF19CBB00C482E8 /* NoteCollectionViewFooter.swift in Sources */,
+				A42734DB1CF19CB200C482E8 /* NoteCollectionViewHeader.swift in Sources */,
 				A40621991CC3799E00BF73D0 /* ImageUtils.swift in Sources */,
+				A42734D91CF196EB00C482E8 /* NoteCollectionViewCell.swift in Sources */,
 				A46EB6A31CA7AEF400FC0C1B /* Theme.swift in Sources */,
 				A46EB6A81CA7B1F800FC0C1B /* Lesson.swift in Sources */,
 				A403269C1CAFC4270084AB09 /* NewNoteViewController.swift in Sources */,

@@ -10,6 +10,5 @@ import Foundation
 
 struct Note {
     var noteText: String
-    var noteImage: UIImage?
-    var noteImagePath: String
+    var noteImageName: String
 }

@@ -16,7 +16,7 @@ class NewNoteViewController: FormViewController {
     var addNoteImageRow: ButtonRow!
     
     var removeNoteImageRow: ButtonRow!
-    var noteImagePath = ""
+    var noteImageName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,9 @@ class NewNoteViewController: FormViewController {
         let formValues = form.values(includeHidden: true)
         let noteText = formValues["Note Text"] as? String ?? ""
         
-        if valid(noteText, noteImagePath: noteImagePath) {
+        if valid(noteText, noteImagePath: noteImageName) {
             // Save Note
-            DataService.sharedInstance.createNote(noteText, noteImagePath: noteImagePath)
+            DataService.sharedInstance.createNote(noteText, noteImageName: noteImageName)
             navigationController?.popViewControllerAnimated(true)
         }
     }
@@ -92,7 +92,7 @@ class NewNoteViewController: FormViewController {
     
     func removeNoteImage() {
         imageAdded = false
-        noteImagePath = ""
+        noteImageName = ""
         evaluvateFormCondtions()
     }
     
@@ -112,8 +112,8 @@ class NewNoteViewController: FormViewController {
 
 extension NewNoteViewController: NewNoteImageViewControllerDelegate {
     
-    func didAddImage(imagePath: String) {
-        noteImagePath = imagePath
+    func didAddImage(fileName: String) {
+        noteImageName = fileName
         imageAdded = true
         evaluvateFormCondtions()
     }
